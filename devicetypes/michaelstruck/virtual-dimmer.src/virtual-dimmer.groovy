@@ -67,12 +67,12 @@ def parse(String description) {
 }
 
 def on() {
-	sendEvent(name: "switch", value: "on")
+	sendEvent(name: "switch", value: "on", isStateChange: true, displayed: false)
     log.info "Dimmer On"
 }
 
 def off() {
-	sendEvent(name: "switch", value: "off")
+	sendEvent(name: “switch”, value: “off”, isStateChange: true, displayed: false)
     log.info "Dimmer Off"
 }
 
